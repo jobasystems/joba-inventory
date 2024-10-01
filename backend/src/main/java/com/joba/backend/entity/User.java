@@ -12,8 +12,8 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
-    private String username;
-    private String password; //this one needs to be encrypted, so that a hash code is safed into the database
+    private String encryptedUsername;
+    private String encryptedPassword;
     private String email;
     private String firstName;
     private String lastName;
@@ -26,19 +26,19 @@ public class User {
         this.id = id;
     }
 
-    public String getUsername() {
+    public String getEncryptedUsername() {
         return username;
     }
 
-    public void setUsername(String username) {
+    public void setEncryptedUsername(String username) {
         this.username = username;
     }
 
-    public String getPassword() {
+    public String getEncryptedPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
+    public void setEncrpytedPassword(String password) {
         this.password = password;
     }
 
